@@ -1,1 +1,577 @@
 
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### The questions for the exercises are given above the cells and the expected output is given below the cell. Please type the code inserting a new cell below the question because if you run the expected output cell the output would vanish! Happy learning! "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 1. Write a Python program to find those numbers which are divisible by 7 and multiple of 5, between 1500 and 2700 (both included). "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[1505, 1540, 1575, 1610, 1645, 1680, 1715, 1750, 1785, 1820, 1855, 1890, 1925, 1960, 1995, 2030, 2065, 2100, 2135, 2170, 2205, 2240, 2275, 2310, 2345, 2380, 2415, 2450, 2485, 2520, 2555, 2590, 2625, 2660, 2695]\n"
+     ]
+    }
+   ],
+   "source": [
+    "lst = []\n",
+    "for i in range(1500,2700):\n",
+    "    if i%7 == 0 and i%5 == 0:\n",
+    "        lst.append(i)\n",
+    "    else:\n",
+    "        continue\n",
+    "print(lst)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1505,1540,1575,1610,1645,1680,1715,1750,1785,1820,1855,1890,1925,1960,1995,2030,2065,2100,2135,2170,2205,2240,2275,2310,2345,2380,2415,2450,2485,2520,2555,2590,2625,2660,2695\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 2. Write a Python program to construct the following pattern, using a nested for loop.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 43,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "* \n",
+      "* * \n",
+      "* * * \n",
+      "* * * * \n",
+      "* * * * * \n",
+      "* * * * \n",
+      "* * * \n",
+      "* * \n",
+      "* \n"
+     ]
+    }
+   ],
+   "source": [
+    "i=6\n",
+    "for i in range(0,i,1):\n",
+    "    print(\"* \" * i)\n",
+    "for j in range(4,0,-1):\n",
+    "    print(\"* \" * j)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "* \n",
+      "* * \n",
+      "* * * \n",
+      "* * * * \n",
+      "* * * * * \n",
+      "* * * * \n",
+      "* * * \n",
+      "* * \n",
+      "* \n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 3. Write a Python program to count the number of even and odd numbers from a series of numbers."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 72,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number of even numbers : 4\n",
+      "Number of odd numbers : 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "lst = []\n",
+    "for i in range(1,10,1):\n",
+    "    if i%2 == 0:\n",
+    "        lst.append(i)\n",
+    "print(\"Number of even numbers :\" ,len(lst))\n",
+    "lst1 = []\n",
+    "for j in range(1,10,1):\n",
+    "    if j%2 != 0:\n",
+    "        lst1.append(j)\n",
+    "print(\"Number of odd numbers :\" ,len(lst1))   \n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Number of even numbers : 4\n",
+      "Number of odd numbers : 5\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 4. Write a Python program to find numbers between 100 and 400 (both included) where each digit of a number is an even number. The numbers obtained should be printed in a comma-separated sequence."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "200,202,204,206,208,220,222,224,226,228,240,242,244,246,248,260,262,264,266,268,280,282,284,286,288,400\n"
+     ]
+    }
+   ],
+   "source": [
+    "dlst = []\n",
+    "for i in range(100,401):\n",
+    "    str1 = str(i)\n",
+    "    cnt=0\n",
+    "    for j in range (0,len(str1)):\n",
+    "        if int(str1[j])%2 == 0:\n",
+    "            cnt = cnt+1\n",
+    "        if cnt == len(str1):\n",
+    "            dlst.append(str(i))\n",
+    "print(\",\" .join(dlst))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "200,202,204,206,208,220,222,224,226,228,240,242,244,246,248,260,262,264,266,268,280,282,284,286,288,400\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 5. Write a Python program to calculate a dog's age in dog's years. Go to the editor\n",
+    "Note: For the first two years, a dog year is equal to 10.5 human years. After that, each dog year equals 4 human years."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Input a dog's age in human years:20\n",
+      "The dog's age in dog's years is  93.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "dyrs =0\n",
+    "hyrs =0\n",
+    "entyrs=0\n",
+    "entyrs = input(\"Input a dog's age in human years:\")\n",
+    "if float(entyrs) >= 2 :\n",
+    "    hyrs = float(entyrs)-2\n",
+    "    dyrs = 2 * 10.5\n",
+    "    hyrs = float(hyrs)* 4\n",
+    "    print(\"The dog's age in dog's years is \" , float(hyrs+dyrs))\n",
+    "else:\n",
+    "    dyrs = float(entyrs) * 10.5\n",
+    "    print(\"The dog's age in dog's years is \" , float(dyrs))\n",
+    "\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Input a dog's age in human years: 20\n",
+      "The dog's age in dog's years is 93\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 6. Write a Python function to find the Max of three numbers."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Enter the 1st Number 3\n",
+      "Enter the 2nd Number 6\n",
+      "Enter the 3rd Number -5\n",
+      "The Three numbers are: \n",
+      "3,6,-5\n",
+      "6\n"
+     ]
+    }
+   ],
+   "source": [
+    "plst = []\n",
+    "for i in range (0,3):\n",
+    "    if i == 0:\n",
+    "        plst.append(str(input(\"Enter the \" + str(i+1) + \"st Number \")))\n",
+    "    elif i == 1:\n",
+    "        plst.append(str(input(\"Enter the \" + str(i+1) + \"nd Number \")))\n",
+    "    else:\n",
+    "        plst.append(str(input(\"Enter the \" + str(i+1) + \"rd Number \")))\n",
+    "\n",
+    "print(\"The Three numbers are: \")\n",
+    "print(\",\".join(plst))\n",
+    "\n",
+    "if (int(plst[0]) > int(plst[1])) and (int(plst[0]) > int(plst[2])):\n",
+    "    print(int(plst[0]))\n",
+    "elif (int(plst[1])> int(plst[0])) and (int(plst[1]) > int(plst[2])):\n",
+    "    print(int(plst[1]))\n",
+    "else:\n",
+    "    print(int(plst[2]))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The Three numbers are: (3, 6, -5)\n",
+      "6\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 7. Write a Python function that takes a number as a parameter and check the number is prime or not."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "99\n",
+      "The number is: 99\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": [
+    "i = int(input())\n",
+    "print(\"The number is:\" ,i)\n",
+    "if (i%2 == 0)or (i%3 == 0):\n",
+    "    print(\"False\")\n",
+    "else:\n",
+    "    print(\"True\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The number is: 9\n",
+      "False\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 8. Write a Python function that accepts a string and calculate the number of upper case letters and lower case letters. Go to the editor\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def accept_string1(Str1):\n",
+    "    ucount = 0\n",
+    "    lcount = 0\n",
+    "    print(\"Original String :\" ,Str1)\n",
+    "    for i in Str1:\n",
+    "        if i.isupper():\n",
+    "            ucount = ucount + 1\n",
+    "        elif i.islower():\n",
+    "            lcount = lcount + 1\n",
+    "        else:\n",
+    "            pass\n",
+    "    print(\"No. of Upper case characters : \" ,ucount)\n",
+    "    print(\"No. of Lower case Characters : \" ,lcount)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original String : Inceptz is One of The BeSt Places TO LEarn DataSciEnce\n",
+      "No. of Upper case characters :  13\n",
+      "No. of Lower case Characters :  32\n"
+     ]
+    }
+   ],
+   "source": [
+    "accept_string1(\"Inceptz is One of The BeSt Places TO LEarn DataSciEnce\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original String :  Inceptz is One of The BeSt Places TO LEarn DataSciEnce\n",
+      "No. of Upper case characters :  13\n",
+      "No. of Lower case Characters :  32\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 9. Write a Python program to reverse a string. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "enter a string:1234abcd\n",
+      "The original string is: 1234abcd\n",
+      "The reversed string:  dcba4321\n"
+     ]
+    }
+   ],
+   "source": [
+    "str2 = str(input(\"enter a string:\"))\n",
+    "print(\"The original string is:\" , str2)\n",
+    "strrev = ''\n",
+    "i = len(str2)\n",
+    "while i > 0:\n",
+    "    strrev = strrev + str2[i-1]\n",
+    "    i = i-1\n",
+    "print(\"The reversed string: \" ,strrev)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The original string is: 1234abcd\n",
+      "The reversed string: dcba4321\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## 10. Write a Python program to find  the greatest common divisor (gcd) of two integers."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "def two_number(a,b):\n",
+    "    int(a)\n",
+    "    int(b)\n",
+    "    print(\"The two numbers are: \" ,(a ,b))\n",
+    "    print(\"The GCD of the numbers are: \" ,math.gcd(a,b))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The two numbers are:  (12, 14)\n",
+      "The GCD of the numbers are:  2\n"
+     ]
+    }
+   ],
+   "source": [
+    "two_number(12,14)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The two numbers are: (12, 14)\n",
+      "The GCD of the numbers are: 2\n"
+     ]
+    }
+   ],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}
